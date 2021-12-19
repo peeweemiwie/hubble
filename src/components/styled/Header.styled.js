@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { Bp, FontFamily, FontSize, Color } from '../variables';
+import { Bp, FontFamily, FontSize } from '../variables';
 const bp = Bp;
 const fontFamily = FontFamily;
 const fontSize = FontSize;
-const color = Color;
 
 export const StyledHeader = styled.header`
 	background-color: ${({ theme }) => theme.headerBg};

@@ -20,7 +20,7 @@ function App() {
 			<StyledPage>
 				<GlobalStyles />
 				<Switch onReceivedTheme={onReceivedTheme} />
-				<Header />
+				<Header theme={currentTheme === 'dark' ? darkTheme : lightTheme} />
 				<Container>
 					{content.map((item, index) => (
 						<Card item={item} key={index} />

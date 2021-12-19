@@ -3,12 +3,12 @@ import { Container } from './styled/Container.styled';
 import { Flex } from './styled/Flex';
 import { StyledHeader, Nav, Logo, Image } from './styled/Header.styled';
 
-const Header = () => {
+const Header = ({ theme }) => {
 	return (
 		<StyledHeader>
 			<Container>
 				<Nav>
-					<Logo src='./images/logo.svg' alt='' />
+					<Logo src={theme.imgSrc} alt='' />
 					<FilledButton bg='#00a1fa'>Try It Free</FilledButton>
 				</Nav>
 				<Flex>

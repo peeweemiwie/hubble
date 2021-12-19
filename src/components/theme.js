@@ -4,6 +4,8 @@ export const darkTheme = {
 	text: Color.white,
 	pageBg: Color.darkGray,
 	headerBg: Color.navy,
+	imgSrc: './images/logo_white.svg',
+	shadow: 'rgba(0, 0, 0, 0.5)',
 };
 
 export const lightTheme = {
@@ -11,4 +13,6 @@ export const lightTheme = {
 	text: Color.gray,
 	pageBg: Color.white,
 	headerBg: '#e6f7fc',
+	imgSrc: './images/logo.svg',
+	shadow: 'rgba(0, 0, 0, 0.1)',
 };

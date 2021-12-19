@@ -12,5 +12,6 @@ export const Flex = styled.div`
 	@media (max-width: ${bp.sm}) {
 		flex-direction: column;
 		text-align: center;
+		row-gap: 1rem;
 	}
 `;
