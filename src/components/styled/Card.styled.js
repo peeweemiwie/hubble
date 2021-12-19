@@ -1,9 +1,14 @@
 import styled from 'styled-components';
+import { Color, Bp } from '../variables';
+const colors = Color;
+const bp = Bp;
 
 export const StyledCard = styled.div`
 	align-items: center;
+	background-color: ${({ theme }) => theme.bg};
 	border-radius: 1rem;
 	box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+	color: ${({ theme }) => theme.text};
 	display: flex;
 	flex-direction: ${({ layout }) => layout || 'row'};
 	padding: 1.6rem;
@@ -22,7 +27,7 @@ export const StyledCard = styled.div`
 		flex: 1;
 	}
 
-	@media (max-width: ${({ theme }) => theme.bp.sm}) {
+	@media (max-width: ${bp.sm}) {
 		flex-direction: column;
 	}
 `;

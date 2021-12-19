@@ -1,21 +1,26 @@
 import styled from 'styled-components';
+import { Bp, FontFamily, FontSize, Color } from '../variables';
+const bp = Bp;
+const fontFamily = FontFamily;
+const fontSize = FontSize;
+const color = Color;
 
 export const StyledHeader = styled.header`
-	background-color: #e6f7fc;
-	padding: 40px 0;
+	background-color: ${({ theme }) => theme.headerBg};
+	padding: 60px 0 40px;
 	h1,
 	p {
-		color: ${({ theme }) => theme.color.gray};
+		color: ${({ theme }) => theme.text};
 	}
 	p {
-		font-size: ${({ theme }) => theme.fontSize.fontReg};
-		font-family: ${({ theme }) => theme.fontFamily.roboto};
+		font-size: ${fontSize.fontReg};
+		font-family: ${fontFamily.roboto};
 		margin-bottom: 4rem;
 	}
 `;
 
 export const Logo = styled.img`
-	@media (max-width: ${({ theme }) => theme.bp.sm}) {
+	@media (max-width: ${bp.sm}) {
 		margin-bottom: 4rem;
 	}
 `;
@@ -26,7 +31,7 @@ export const Nav = styled.nav`
 	justify-content: space-between;
 	margin-bottom: 4rem;
 
-	@media (max-width: ${({ theme }) => theme.bp.sm}) {
+	@media (max-width: ${bp.sm}) {
 		flex-direction: column;
 	}
 `;
@@ -34,7 +39,7 @@ export const Nav = styled.nav`
 export const Image = styled.img`
 	width: 37.5rem;
 	margin-left: 4rem;
-	@media (max-width: ${({ theme }) => theme.bp.sm}) {
+	@media (max-width: ${bp.sm}) {
 		margin: 4rem 0 3rem;
 	}
 `;

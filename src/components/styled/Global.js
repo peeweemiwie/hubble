@@ -1,8 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
+import { Color, FontFamily, FontSize } from '../variables';
+const color = Color;
+const fontFamily = FontFamily;
+const fontSize = FontSize;
 
 const GlobalStyles = createGlobalStyle`
+body {
+  margin: 0;
+}
   html {
-	  font-family: ${({ theme }) => theme.fontFamily.roboto};
+	  font-family: ${fontFamily.roboto};
     font-size: 10px; // 1rem === 10px
   }
   * {
@@ -11,20 +18,20 @@ const GlobalStyles = createGlobalStyle`
   h1,
   h2,
   h3 {
-    font-family: ${({ theme }) => theme.fontFamily.montserrat};
+    font-family: ${fontFamily.montserrat};
     margin: 0;
   }
   h1 {
-    font-size: ${({ theme }) => theme.fontSize.fontLg};
+    font-size: ${fontSize.fontLg};
     font-weight: 300;
   }
   h2 {
-    font-size: ${({ theme }) => theme.fontSize.fontMd};
+    font-size: ${fontSize.fontMd};
     font-weight: 300;
   }
   p {
-    font-family: ${({ theme }) => theme.fontFamily.roboto};
-    font-size: ${({ theme }) => theme.fontSize.fontReg};
+    font-family: ${fontFamily.roboto};
+    font-size: ${fontSize.fontReg};
     font-weight: 200;
   }
   .strong {
@@ -32,10 +39,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .section-header {
-    font-size: $font-reg;
+    font-size: ${fontSize.fontReg};
     font-weight: 300;
   }
-
 `;
 
 export default GlobalStyles;

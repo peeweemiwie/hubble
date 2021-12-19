@@ -1,14 +1,16 @@
 import styled from 'styled-components';
-
-const white = ({ theme }) => theme.color.white;
-const gray = ({ theme }) => theme.color.gray;
+import { Color, FontSize } from '../variables';
+const colors = Color;
+const fontSize = FontSize;
+// const white = ({ theme }) => theme.color.white;
+// const gray = ({ theme }) => theme.color.gray;
 
 export const BaseButton = styled.button`
 	background-color: transparent;
 	border: 1px solid transparent;
 	border-radius: 2rem;
-	color: ${({ color }) => color || white};
-	font-size: ${({ theme }) => theme.fontSize.fontReg};
+	color: ${({ color }) => color || colors.white};
+	font-size: ${fontSize.fontReg};
 	padding: 0.5em 1em;
 	transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
 	&:hover {
@@ -20,10 +22,10 @@ export const BaseButton = styled.button`
 export const FilledButton = styled(BaseButton)`
 	background-color: ${({ bg }) => bg || 'transparent'};
 	border: 1px solid ${({ borderColor }) => borderColor || 'transparent'};
-	color: ${({ color }) => color || white};
+	color: ${({ color }) => color || colors.white};
 `;
 
 export const BorderButton = styled(BaseButton)`
 	border-color: ${({ borderColor }) => borderColor || 'transparent'};
-	color: ${({ color }) => color || gray};
+	color: ${({ color }) => color || colors.gray};
 `;

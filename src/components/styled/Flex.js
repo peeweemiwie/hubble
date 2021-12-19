@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Bp } from '../variables';
+const bp = Bp;
 
 export const Flex = styled.div`
 	display: flex;
@@ -7,7 +9,7 @@ export const Flex = styled.div`
 		flex: 1;
 	}
 
-	@media (max-width: ${({ theme }) => theme.bp.sm}) {
+	@media (max-width: ${bp.sm}) {
 		flex-direction: column;
 		text-align: center;
 	}
